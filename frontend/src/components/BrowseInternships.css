@@ -1,0 +1,877 @@
+/* ==============================
+   DeeLance Cyberpunk Theme Match
+   ============================== */
+
+.bi-wrap {
+  width: 100%;
+  padding: 12px 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Header */
+.bi-topbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.bi-titlebox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bi-title {
+  font-size: 30px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.4px;
+}
+
+.bi-title span {
+  color: #38ff7b;
+  text-shadow: 0 0 14px rgba(56, 255, 123, 0.25);
+}
+
+.bi-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Filters pills */
+.bi-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bi-filter-btn {
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.2s ease;
+}
+
+.bi-filter-btn:hover {
+  color: #ffffff;
+  border-color: rgba(56, 255, 123, 0.22);
+  background: rgba(56, 255, 123, 0.06);
+}
+
+.bi-filter-btn.active {
+  color: #38ff7b;
+  border-color: rgba(56, 255, 123, 0.35);
+  background: rgba(56, 255, 123, 0.12);
+  box-shadow: 0 0 24px rgba(56, 255, 123, 0.18);
+}
+
+/* Grid layout */
+.bi-grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  overflow: visible;
+}
+
+@media (min-width: 860px) {
+  .bi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1250px) {
+  .bi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card */
+.bi-card {
+  border-radius: 18px;
+  padding: 18px;
+
+  background: rgba(18, 18, 18, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.55);
+  transition: 0.22s ease;
+
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  overflow: visible;
+}
+
+.bi-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at top right,
+      rgba(56, 255, 123, 0.12),
+      transparent 45%
+    ),
+    radial-gradient(circle at bottom left, rgba(0, 255, 255, 0.07), transparent 50%);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.bi-card:hover {
+  border-color: rgba(56, 255, 123, 0.22);
+  box-shadow: 0 0 55px rgba(56, 255, 123, 0.10);
+  transform: translateY(-3px);
+}
+
+/* Card Header */
+.bi-cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+}
+
+.bi-card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+}
+
+.bi-company {
+  margin-top: 5px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+/* Status Badge */
+.bi-status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* OPEN (Green) */
+.bi-status.open {
+  border: 1px solid rgba(56, 255, 123, 0.35);
+  background: rgba(56, 255, 123, 0.08);
+  color: #38ff7b;
+}
+
+/* IN-PROGRESS (Orange like your screenshot) */
+.bi-status.inprogress {
+  border: 1px solid rgba(255, 180, 90, 0.55);
+  background: rgba(0, 0, 0, 0.15);
+  color: rgba(255, 200, 135, 0.95);
+}
+
+/* Disable Status toggle when not active */
+.bi-statusTab:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Description */
+.bi-desc {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+  position: relative;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Tags */
+.bi-tags {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+}
+
+.bi-tag {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Divider */
+.bi-divider {
+  margin-top: 16px;
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.10);
+  position: relative;
+}
+
+/* Stats */
+.bi-stats {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+}
+
+.bi-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bi-stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+
+  background: rgba(56, 255, 123, 0.08);
+  border: 1px solid rgba(56, 255, 123, 0.22);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #38ff7b;
+  font-weight: 800;
+}
+
+.bi-stat-value {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.bi-stat-label {
+  margin-top: 3px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+/* Bottom Info */
+.bi-bottom {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  position: relative;
+}
+
+/* Button */
+.bi-btn {
+  margin-top: auto;
+  padding: 12px;
+  border-radius: 14px;
+
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(56, 255, 123, 0.28);
+
+  color: #38ff7b;
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.bi-btn:hover {
+  background: rgba(56, 255, 123, 0.12);
+  box-shadow: 0 0 24px rgba(56, 255, 123, 0.14);
+  transform: translateY(-1px);
+}
+
+.bi-actions {
+  margin-top: auto;
+  padding-top: 14px;
+  position: relative;
+}
+
+.bi-btnFull {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 16px;
+}
+
+/* Main Button */
+.bi-btn {
+  flex: 1;
+  padding: 12px;
+  border-radius: 14px;
+
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(56, 255, 123, 0.28);
+
+  color: #38ff7b;
+  font-weight: 900;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.bi-btn:hover {
+  background: rgba(56, 255, 123, 0.12);
+  box-shadow: 0 0 24px rgba(56, 255, 123, 0.14);
+  transform: translateY(-1px);
+}
+
+/* Apply Button */
+.bi-applyBtn {
+  width: 120px;
+  padding: 12px 14px;
+  border-radius: 14px;
+
+  background: rgba(56, 255, 123, 0.18);
+  border: 1px solid rgba(56, 255, 123, 0.28);
+
+  color: #05120a;
+  font-weight: 1000;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.bi-applyBtn:hover {
+  background: rgba(56, 255, 123, 0.28);
+  box-shadow: 0 0 26px rgba(56, 255, 123, 0.20);
+  transform: translateY(-1px);
+}
+
+/* Drop-up Header */
+.bi-dropupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bi-dropupTitle {
+  font-size: 16px;
+  font-weight: 900;
+  color: #bfffd8;
+}
+
+.bi-dropupSub {
+  margin-top: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.bi-dropupClose {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.bi-dropupClose:hover {
+  border-color: rgba(56, 255, 123, 0.25);
+  background: rgba(56, 255, 123, 0.08);
+  transform: rotate(90deg);
+}
+
+/* ==========================
+   ✅ DEBUGGED VIEW DETAILS DROP-UP (BIG + OLD STYLE)
+   ========================== */
+
+/* IMPORTANT: Dropup should not be blocked by card */
+.bi-card {
+  overflow: visible !important;
+  position: relative !important;
+  z-index: 1;
+}
+
+/* ✅ OLD STYLE BIG DROP-UP OPENING UPWARD */
+.bi-dropup {
+  display: none; /* ✅ key fix */
+
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  bottom: calc(100% + 12px);
+
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+
+  background: rgba(8, 8, 8, 0.98);
+  border: 1px solid rgba(56, 255, 123, 0.35);
+  border-radius: 22px;
+
+  box-shadow: 0 0 90px rgba(0, 0, 0, 0.85);
+  z-index: 999999;
+
+  overflow: hidden;
+}
+
+.bi-dropup.show {
+  display: block;
+  animation: biDropUpOld 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes biDropUpOld {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* 2 Columns */
+.bi-dropupGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 16px;
+  padding: 16px 18px 18px;
+}
+
+@media (max-width: 900px) {
+  .bi-dropupGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bi-dropupGrid.single {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px 18px 18px;
+}
+
+/* Left side */
+.bi-leftPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bi-leftBox {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.bi-boxTitle {
+  font-size: 14px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+}
+
+.bi-boxText {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.bi-offerRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bi-offerRow:last-child {
+  border-bottom: none;
+}
+
+.bi-offerLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 700;
+}
+
+.bi-offerValue {
+  font-size: 13px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+/* Bigger tags inside left panel */
+.bi-tags.big {
+  margin-top: 10px;
+}
+
+/* Apply button on LEFT */
+.bi-applyNowBig {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+
+  background: rgba(56, 255, 123, 0.22);
+  border: 1px solid rgba(56, 255, 123, 0.40);
+
+  color: #05120a;
+  font-weight: 1000;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.bi-applyNowBig:hover {
+  background: rgba(56, 255, 123, 0.32);
+  box-shadow: 0 0 30px rgba(56, 255, 123, 0.22);
+  transform: translateY(-2px);
+}
+
+/* Right side (terms) */
+.bi-rightPanel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 14px;
+
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+/* Term Boxes */
+.bi-termBox {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 14px;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.bi-termHeading {
+  font-size: 13px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.bi-termText {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.bi-green {
+  color: #38ff7b;
+  font-weight: 900;
+}
+
+/* Bottom inside dropup */
+.bi-dropupBottom {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bi-applyNow {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  color: #ffffff !important;
+
+  background: rgba(56, 255, 123, 0.20);
+  border: 1px solid rgba(56, 255, 123, 0.38);
+
+  color: #38ff7b;
+  font-weight: 1000;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.bi-applyNow:hover {
+  background: rgba(56, 255, 123, 0.30);
+  box-shadow: 0 0 26px rgba(56, 255, 123, 0.22);
+}
+
+/* =========================
+   HOW IT WORKS (Minimal Blue)
+   ========================= */
+
+.hiw-wrap {
+  width: 100%;
+  margin: 24px 0 18px;
+  padding: 10px 0 10px;
+}
+
+.hiw-title {
+  text-align: center;
+  font-size: 27px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 29px;
+  letter-spacing: 0.3px;
+}
+
+/* 3 columns layout */
+.hiw-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .hiw-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Remove card look completely */
+.hiw-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Number only in blue (no glow, no box) */
+.hiw-step {
+  width: auto;
+  height: auto;
+  border: none;
+  background: none;
+  box-shadow: none;
+
+  font-size: 20px;
+  font-weight: 900;
+  color: #38ff7b;
+
+  margin-bottom: 12px;
+}
+
+/* Title */
+.hiw-heading {
+  font-size: 16px;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.hiw-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   Search + Vote Toggle Row
+   =========================== */
+
+.bi-tools {
+  margin-top: 14px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Search Box */
+.bi-searchBox {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 14px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bi-searchIcon {
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.bi-searchInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.bi-searchInput::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* ===========================
+   Open / In-Progress Toggle
+   =========================== */
+
+.bi-statusToggleWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bi-statusToggle {
+  display: flex;
+  padding: 4px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bi-statusTab {
+  border: none;
+  cursor: pointer;
+  padding: 9px 14px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 13px;
+  transition: 0.25s ease;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Open side (green) */
+.bi-statusTab.openTab.active {
+  background: rgba(56, 255, 123, 0.18);
+  border: 1px solid rgba(56, 255, 123, 0.35);
+  color: #38ff7b;
+}
+
+/* In-Progress side (orange) */
+.bi-statusTab.progTab.active {
+  background: rgba(255, 180, 90, 0.16);
+  border: 1px solid rgba(255, 180, 90, 0.40);
+  color: rgba(255, 200, 135, 0.95);
+}
+
+/* ===========================
+   Voting Status (Blue)
+   =========================== */
+
+.bi-status.voting {
+  border: 1px solid rgba(47, 185, 255, 0.55);
+  background: rgba(47, 185, 255, 0.10);
+  color: rgba(170, 230, 255, 0.95);
+}
+
+/* ===========================
+   Vote Buttons in View Details
+   =========================== */
+
+.bi-loading {
+  padding: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bi-voteBox {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.bi-voteHint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 8px;
+}
+
+.bi-voteInput {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.22);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.bi-voteBtns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.bi-voteBtn {
+  flex: 1;
+  min-width: 170px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 900;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.22);
+  color: rgba(255, 255, 255, 0.85);
+  transition: 0.2s ease;
+}
+
+/* Up Vote */
+.bi-voteBtn.up:hover {
+  border-color: rgba(56, 255, 123, 0.35);
+  background: rgba(56, 255, 123, 0.10);
+  transform: translateY(-1px);
+}
+
+/* Down Vote */
+.bi-voteBtn.down:hover {
+  border-color: rgba(255, 95, 95, 0.35);
+  background: rgba(255, 95, 95, 0.10);
+  transform: translateY(-1px);
+}
+.applyBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+  filter: grayscale(60%);
+}
+

@@ -1,0 +1,545 @@
+.cd-wrap {
+  width: 100%;
+  padding: 18px 22px;
+  color: white;
+}
+
+/* HERO like screenshot 1 */
+.cd-hero {
+  width: 100%;
+  min-height: 340px;
+  border-radius: 22px;
+
+  background: rgba(18, 18, 18, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.55);
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 22px;
+
+  padding: 26px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .cd-hero {
+    grid-template-columns: 1fr
+  }
+}
+
+.cd-heroLeft {
+  position: relative;
+}
+
+.cd-heroTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* .cd-accentLine {
+  width: 8px;
+  height: 140px;
+  margin-bottom: 40px;
+  background: #38ff7b;
+  border-radius: 999px;
+  flex-shrink: 0;
+  
+} */
+
+.cd-title {
+  font-size: 52px;
+  font-weight: 1000;
+  letter-spacing: 1px;
+  margin-left: 50px;
+  color: rgba(255, 255, 255, 0.92);
+   width: 8px;
+  height: 180px;
+  margin-bottom: 40px;
+  margin-right:50px;
+  background: #38ff7b;
+  border-radius: 999px;
+  flex-shrink: 0;
+  padding-left: 5px;
+}
+
+.cd-subtitle {
+  margin-top: 18px;
+  margin-left: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Right card */
+.cd-heroRight {
+  display: flex;
+  justify-content: center;
+}
+
+.cd-newCard {
+  width: 280px;
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.cd-newCardTop {
+  height: 160px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.cd-newCardBar {
+  height: 28px;
+  width: 80%;
+  margin: 14px auto 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cd-newCardBar.small {
+  width: 62%;
+  opacity: 0.7;
+}
+
+.cd-plusCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: rgba(56, 255, 123, 0.18);
+  border: 1px solid rgba(56, 255, 123, 0.35);
+  color: #38ff7b;
+  font-size: 34px;
+  font-weight: 900;
+
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  transition: 0.2s ease;
+}
+
+.cd-plusCircle:hover {
+  transform: translate(-50%, -34%) scale(1.05);
+}
+
+.cd-newBtn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.cd-newBtn:hover {
+  border-color: rgba(56, 255, 123, 0.30);
+  background: rgba(56, 255, 123, 0.08);
+}
+
+.cd-folder {
+  margin-right: 8px;
+}
+
+.cd-newHint {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* list */
+.cd-list {
+  margin-top: 22px;
+}
+
+.cd-listTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cd-sectionTitle {
+  font-size: 22px;
+  font-weight: 1000;
+}
+
+.cd-primaryBtn {
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(56, 255, 123, 0.30);
+  background: rgba(56, 255, 123, 0.14);
+  color: #38ff7b;
+  font-weight: 1000;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cd-primaryBtn:hover {
+  background: rgba(56, 255, 123, 0.20);
+  transform: translateY(-1px);
+}
+
+.cd-empty {
+  margin-top: 14px;
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cd-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 950px) {
+  .cd-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cd-card {
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(18, 18, 18, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+}
+
+.cd-cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.cd-cardTitle {
+  font-size: 16px;
+  font-weight: 1000;
+}
+
+.cd-cardSub {
+  margin-top: 6px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cd-status {
+  color: #38ff7b;
+  font-weight: 1000;
+}
+
+.cd-pill {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 255, 123, 0.30);
+  background: rgba(56, 255, 123, 0.12);
+  color: #38ff7b;
+  font-weight: 1000;
+}
+
+.cd-desc {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.cd-metaRow {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+}
+
+.cd-tags {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cd-tag {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 900;
+  font-size: 12px;
+}
+
+/* ==========================
+   MODAL (like screenshot 2)
+   ========================== */
+.cmodal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  z-index: 999999;
+  padding: 18px;
+}
+
+.cmodal-card {
+  width: min(860px, 95vw);
+  background: rgba(18, 18, 18, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 22px;
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+
+.cmodal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cmodal-title {
+  font-size: 18px;
+  font-weight: 1000;
+}
+
+.cmodal-close {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.cmodal-close:hover {
+  border-color: rgba(56, 255, 123, 0.25);
+  background: rgba(56, 255, 123, 0.08);
+  transform: rotate(90deg);
+}
+
+.cmodal-body {
+  padding: 18px 20px 20px;
+}
+
+.cmodal-field {
+  margin-bottom: 14px;
+}
+
+.cmodal-field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.cmodal-field input,
+.cmodal-field textarea {
+  width: 100%;
+  border-radius: 14px;
+  padding: 12px 14px;
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: white;
+  font-weight: 700;
+}
+
+.cmodal-field textarea {
+  resize: none;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+.cmodal-field input::placeholder,
+.cmodal-field textarea::placeholder {
+  color: rgba(255, 255, 255, 0.30);
+}
+
+/* skills */
+.cmodal-skillBox {
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.cmodal-skillSelected {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 10px;
+}
+
+.cmodal-skillGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 160px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.cmodal-skillTag {
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.75);
+
+  padding: 8px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+.cmodal-skillTag:hover {
+  background: rgba(56, 255, 123, 0.08);
+  border-color: rgba(56, 255, 123, 0.25);
+}
+
+.cmodal-skillTag.active {
+  background: rgba(56, 255, 123, 0.14);
+  border-color: rgba(56, 255, 123, 0.35);
+  color: #38ff7b;
+}
+
+/* ✅ Adjacent row */
+.cmodal-row3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 850px) {
+  .cmodal-row3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cmodal-actions {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cmodal-secondary {
+  padding: 12px 14px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 1000;
+}
+
+.cmodal-primary {
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  background: rgba(56, 255, 123, 0.16);
+  border: 1px solid rgba(56, 255, 123, 0.32);
+  color: #38ff7b;
+  font-weight: 1000;
+  transition: 0.2s ease;
+}
+
+.cmodal-primary:hover {
+  background: rgba(56, 255, 123, 0.22);
+  transform: translateY(-1px);
+}
+.cd-walletBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(57, 255, 20, 0.55);
+  background: rgba(0, 0, 0, 0.25);
+  color: #39ff14;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+
+.cd-walletBtn:hover {
+  background: rgba(57, 255, 20, 0.12);
+  box-shadow: 0 0 18px rgba(57, 255, 20, 0.35);
+  transform: translateY(-1px);
+}
+
+.cd-walletIcon {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.cd-balanceBtn {
+  /* same styling as cd-walletBtn, no overrides needed */
+}
+
+.cd-cardActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cd-actionBtn {
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  border: 1px solid rgba(56, 255, 123, 0.35);
+  background: rgba(56, 255, 123, 0.12);
+  color: #38ff7b;
+  transition: 0.2s;
+}
+
+.cd-actionBtn:hover {
+  background: rgba(56, 255, 123, 0.2);
+}
+
+.cd-actionBtn.danger {
+  border-color: rgba(255, 80, 80, 0.4);
+  background: rgba(255, 80, 80, 0.12);
+  color: #ff6b6b;
+}
+
+.cd-actionBtn.danger:hover {
+  background: rgba(255, 80, 80, 0.2);
+}

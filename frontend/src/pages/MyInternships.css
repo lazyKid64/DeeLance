@@ -1,0 +1,427 @@
+.mi-wrap {
+  width: 100%;
+  padding: 22px 26px;
+  color: white;
+}
+
+/* Header */
+.mi-header {
+  margin-bottom: 18px;
+}
+
+.mi-title {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+}
+
+.mi-subtitle {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+/* Sections */
+.mi-section {
+  margin-top: 22px;
+}
+
+.mi-sectionHead {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0 16px;
+}
+
+.mi-sectionTitle {
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.mi-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Ongoing grid */
+.mi-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+@media (min-width: 950px) {
+  .mi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card style (matches old UI) */
+.mi-card {
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+
+  background: rgba(20, 20, 20, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.55);
+
+  overflow: hidden;
+}
+
+.mi-cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.mi-cardTitle {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.mi-cardSub {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+/* Divider line inside card */
+.mi-divider {
+  margin: 16px 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Info rows */
+.mi-infoRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.mi-ic {
+  opacity: 0.75;
+}
+
+.mi-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Bottom actions row (matches old UI alignment) */
+.mi-actions {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Left button "Add project" */
+.mi-actionBtn {
+  border-radius: 14px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 14px;
+  transition: 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Add project button (ghost) */
+.mi-actionBtn.ghost {
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.mi-actionBtn.ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Dashboard button (solid green like screenshot) */
+.mi-actionBtn.solid {
+  background: rgba(57, 255, 136, 0.14);
+  border: 1px solid rgba(57, 255, 136, 0.28);
+  color: rgba(185, 255, 224, 0.95);
+}
+
+.mi-actionBtn.solid:hover {
+  background: rgba(57, 255, 136, 0.22);
+  transform: translateY(-1px);
+}
+
+.mi-arrow {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* Right side in actions (timer + dashboard) */
+.mi-actionRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Timer chip (blue pill like screenshot) */
+.mi-timerChip {
+  padding: 10px 16px;
+  border-radius: 14px;
+  font-weight: 900;
+  font-size: 12px;
+
+  color: rgba(200, 220, 255, 0.9);
+  background: rgba(120, 140, 255, 0.10);
+  border: 1px solid rgba(120, 140, 255, 0.18);
+}
+
+.mi-timerChip span {
+  margin-left: 10px;
+  color: rgba(120, 190, 255, 0.95);
+}
+
+/* Completed list */
+.mi-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Completed row card like old UI */
+.mi-rowCard {
+  border-radius: 18px;
+  padding: 16px 18px;
+
+  background: rgba(20, 20, 20, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.mi-rowTitle {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.mi-rowSub {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.mi-rowRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mi-rowDate {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.mi-rowBtn {
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.mi-rowBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+/* 3-dot menu */
+.mi-menuWrap {
+  position: relative;
+}
+
+.mi-dotBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.mi-dotBtn:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.mi-menu {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 170px;
+
+  background: rgba(10, 10, 10, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  z-index: 50;
+}
+
+.mi-menuItem {
+  width: 100%;
+  padding: 12px 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 900;
+  text-align: left;
+
+  transition: 0.2s ease;
+}
+
+.mi-menuItem:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mi-menuItem.danger {
+  color: rgba(255, 110, 110, 0.95);
+}
+
+.mi-empty {
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+.mi-modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  z-index: 99999;
+  padding: 20px;
+}
+
+.mi-modal {
+  width: min(480px, 100%);
+  background: rgba(18, 18, 18, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+}
+
+.mi-modalHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mi-modalTitle {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.mi-modalClose {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mi-modalClose:hover {
+  background: rgba(56, 255, 123, 0.1);
+  border-color: rgba(56, 255, 123, 0.3);
+}
+
+.mi-modalBody {
+  padding: 20px;
+}
+
+.mi-modalLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mi-modalTextarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 14px;
+  resize: vertical;
+  margin-bottom: 16px;
+}
+
+.mi-modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.mi-modalBtn {
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mi-modalBtn.secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.mi-modalBtn.primary {
+  background: rgba(56, 255, 123, 0.15);
+  border: 1px solid rgba(56, 255, 123, 0.35);
+  color: #38ff7b;
+}
+
+.mi-modalBtn.primary:hover:not(:disabled) {
+  background: rgba(56, 255, 123, 0.25);
+}
+
+.mi-modalBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
